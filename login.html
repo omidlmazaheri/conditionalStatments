@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        <p id="demo"></p>
+        <input type="text" placeholder="please enter your usename" required id="username"> <br>
+        <input type="text" placeholder="please enter your pasword" required id="password"><br>
+        <button onclick="login()">login</button>
+    </form>
+
+
+    <script>
+        let uname, psw ,para;
+        uname = document.getElementById("username");
+        psw = document.getElementById("password");
+        para = document.getElementById("demo");
+        function login() {
+            if ((uname.value.toLowerCase() === "admin".toLowerCase()) && (Number(psw.value)  === 123) ) {
+                
+                    para.innerHTML = "welcome!";
+               
+                
+
+            } else {
+                para.innerHTML = "try again!";
+
+            }
+        }
+    </script>
+</body>
+
+</html>
