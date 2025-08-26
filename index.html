@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    your age:
+    <input type="number" id="age"  placeholder="please enter your name">
+    <input type="button" value="vote" onclick="checkAge()">
+    <script>
+        let inpt= document.getElementById("age");
+        let msg=document.getElementById("demo");
+        function checkAge() {
+            if ( inpt.value>=18) {
+                msg.innerHTML="<b>you</b> can vote!"
+            } else {
+                msg.innerHTML="<b>you</b> cant vote! <br> <a href='legal.html'>terms</a>"
+            }
+        }
+    </script>
+</body>
+</html>
