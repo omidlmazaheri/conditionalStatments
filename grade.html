@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <label for="score">Please enter youe score:</label>
+    <input type="number" name="score" id="scr">
+
+    <button onclick="generateGrade()">Grade</button>
+    <script>
+        let score = document.getElementById("scr");
+        let demo = document.getElementById("demo");
+        let txt = "";
+        function generateGrade() {
+            if (score.value >= 80) {
+                txt = "Your Grade is:<b>A</b>";
+            } else if(score.value >= 60) {
+                txt = "Your Grade is:<b>B</b>";
+            
+            } else if(score.value >= 40){
+                txt = "Your Grade is:<b>C</b>";
+            
+            } else if(score.value >= 20){
+                txt = "Your Grade is:<b>D</b>";
+            } else if(score.value >= 10){
+                txt = "Your Grade is:<b>E</b>";
+            }else if(score.value >= 0){
+                txt = "Your Grade is:<b>F</b>";
+            }else{
+                txt = "Unknown Value";
+            }
+            demo.innerHTML = txt;
+        }
+        
+    </script>
+</body>
+
+</html>
